@@ -69,12 +69,12 @@ const infiniteScroll = () => {
     if(!wrapper.matches(":hover")) autoPlay();
 }
 
-
 const autoPlay = () => {
     if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
     // Autoplay the slideNews after every 2500 ms
     timeoutId = setTimeout(() => slideNews.scrollLeft += firstCardWidth, 5000);
 }
+
 autoPlay();
 
 slideNews.addEventListener("mousedown", dragStart);
