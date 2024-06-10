@@ -63,23 +63,9 @@ const infiniteScroll = () => {
         slideNews.scrollLeft = slideNews.offsetWidth;
         slideNews.classList.remove("no-transition");
     }
-
-    // Clear existing timeout & start autoplay if mouse is not hovering over slideNews
-    clearTimeout(timeoutId);
-    if(!wrapper.matches(":hover")) autoPlay();
 }
-
-const autoPlay = () => {
-    if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
-    // Autoplay the slideNews after every 2500 ms
-    timeoutId = setTimeout(() => slideNews.scrollLeft += firstCardWidth, 5000);
-}
-
-autoPlay();
 
 slideNews.addEventListener("mousedown", dragStart);
 slideNews.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 slideNews.addEventListener("scroll", infiniteScroll);
-wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-wrapper.addEventListener("mouseleave", autoPlay);

@@ -19,7 +19,6 @@ body{
     position: absolute;
     background-color: transparent;
     z-index: 2;
-    box-shadow: 0px -2px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 .container-fluid .navbar-brand{
@@ -204,48 +203,50 @@ main{
 }
 
 .conteinerNoticias{
-    background-color: white;
+    background-color: rgba(255, 252, 252, 0.904);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     margin: 20px 30px 10px 30px;
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
-    padding: 100px 10px 100px 10px;
+    padding: 50px 10px 50px 10px;
     position: relative;
     z-index: 1;
 }
 
 .conteinerNoticias h2{
+    font-size: 3em;
     width: 100%;
     text-align: center;
+    color: rgb(45, 124, 155);
+    margin: 0;
 }
 
 .conteinerNoticias p{
     width: 100%;
     text-align: center;
+    margin-bottom: 20px;
+    color: #9c9c9c;
 }
 
 .conteinerNoticias hr{
-    width: 10%;
-}
+    width: 30%;
+    color: rgb(91, 159, 236);}
 
 .cajasEventos {
     display: flex;
     padding: 0 35px;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
   }
   .wrapper {
-    max-width: 1100px;
     width: 100%;
     position: relative;
-    overflow-y: hidden;
-    scrollbar-width: none;
+
   }
   .wrapper i {
-    z-index: 1;
+    z-index: 6;
     top: 50%;
     height: 50px;
     width: 50px;
@@ -292,16 +293,16 @@ main{
     scroll-snap-type: none;
     scroll-behavior: auto;
   }
-  .slideNews.dragging .card {
+  .slideNews.dragging a .card {
     cursor: grab;
     user-select: none;
   }
-  .slideNews :where(.card, .img) {
+  .slideNews a :where(.card, .img) {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .slideNews .card {
+  .slideNews a .card {
     scroll-snap-align: start;
     height: 342px;
     list-style: none;
@@ -309,9 +310,10 @@ main{
     cursor: pointer;
     flex-direction: column;
     border-radius: 8px;
+    overflow: hidden;
   }
 
-  .slideNews .card .img {
+  .slideNews a .card .img {
     background: #8B53FF;
     border-radius: 8px;
     width: 100%;
@@ -321,6 +323,13 @@ main{
     border-radius: 8px;
     width: 100%;
     height: 100%;
+    transition: all ease .4s;
+  }
+
+  .card:hover .img img{
+    width: 120%;
+    height: 120%;
+    transition: all ease .2s;
   }
 
   .intro{
@@ -358,9 +367,10 @@ main{
   }
 
   .card:hover h2{
-    top: 0;
-    transition: all ease .4s;
-    text-decoration: overline;
+    top: 50%;
+    bottom: 50%;
+    transition: all ease 1s;
+    text-decoration: underline;
   }
 
   .slideNews .card span {
@@ -389,18 +399,19 @@ main{
 }
 
 .conteinerEntidades{
-    background-color: white;
+    background-image: url(../img/background-ent.jpg);
+    background-size: cover;
     display: grid;
     justify-items: center;
     width: 100%;
-    margin: 10px 0px 50px 0px;
+    margin: 10px 0px 0px 0px;
     box-shadow: -1px 8px 20px 4px rgba(0, 0, 0, 0.2);
-    padding: 100px 10px 100px 10px;
+    padding: 10px 10px 50px 10px;
 }
 
 .conteinerEntidades h2{
-    font-size: 5em;
-    margin-bottom: 50px;
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
 .cajasEntidades{
@@ -416,45 +427,44 @@ main{
 }
 
 .entidadesItem{
-    background-size: cover;
-    margin: 20px;
-    width: 300px;
-    height: 400px;
+    background-color: transparent;
+    margin: 0;
+    width: 150px;
+    height: 150px;
     box-sizing: border-box;
     box-shadow: -2px 6px 20px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 30%;
+    transition: background-color ease .4s;
+    transition: scale ease .4s;
+    transition: box-shadow ease .4s;
+    overflow: hidden;
+}
+
+.entidadesItem:hover{
+    scale: 1.1;
+    background-color: rgb(238, 238, 238);
+    transition: all .2s ease;
+    box-shadow: none;
 }
 
 .entidadesItem .img_foot img{
-    width: 40%;
+    width: 100%;
 }
 
 .logointi{
-    width: 50%;
+    width: 60%;
 }
 
-.secre{
-    background-image: url(../img/fondo_secre.png);
-}
-
-.adu{
-    background-image: url(../img/fondo_aduana.png);
-}
-
-.ene{
-    background-image: url(../img/fondo_enerse.png);
-}
-
-.inti{
-    background-image: url(../img/fondo_inti.png);
+.entidadesItem .img_foot{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
 .secre, .adu, .ene, .inti{
-    padding: 2em 1em 1em 1em;
-    width: 20em;
-    height: 24em;
     display: flex;
     flex-flow: wrap column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -464,7 +474,7 @@ main{
     width: 100%;
     display: flex;
     box-sizing: border-box;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .main_foot .logo_foot{
@@ -506,7 +516,7 @@ main{
 }
 
 .redes h4{
-    color: rgb(97, 192, 255);
+    color: rgb(45, 124, 155);
 }
 
 .iconos{
@@ -525,11 +535,13 @@ main{
 .yt{
     background-image: url(../icon/yt.png);
     transition: 0.4s;
+    scale: 1.2;
 }
 
 .x{
     background-image: url(../icon/x.png);
     transition: 0.4s;
+    scale: 1.1;
 }
 
 .fb{
@@ -540,22 +552,19 @@ main{
 .yt:hover{
     background-image: url(../icon/yt_hover.png);
     transition: 0.2s;
-    width: 50px;
-    height: 50px;
+    scale: 1.3;
 }
 
 .x:hover{
     background-image: url(../icon/x_hover.png);
     transition: 0.2s;
-    width: 50px;
-    height: 50px;
+    scale: 1.3;
 }
 
 .fb:hover{
     background-image: url(../icon/fb_hover.png);
     transition: 0.2s;
-    width: 50px;
-    height: 50px;
+    scale: 1.2;
 }
 
 .contacto hr{
@@ -580,10 +589,6 @@ main{
     color: black;
     transition: 0.2s;
 }
-
-
-
-
 
 @media screen and (max-width: 900px) {
     .wrapper .slideNews {
