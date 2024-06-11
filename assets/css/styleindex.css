@@ -14,7 +14,7 @@ body{
     box-sizing: border-box;
 }
 .navbar{
-    min-width: 730px;
+    min-width: 930px;
     width: 100%;
     position: absolute;
     background-color: transparent;
@@ -56,7 +56,7 @@ body{
 }
 
 .carousel{
-    min-width: 730px;
+    min-width: 930px;
     display: grid;
     align-items: center;
 }
@@ -184,8 +184,17 @@ body{
 
 .botonesInicio a button{
     font-size: 0.7em;
-    border-radius: 0px;
+    border-radius: 4px;
     padding: 10px 50px 10px 50px;
+}
+
+.carousel .iconos-carousel{
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
 }
 
 main{
@@ -194,7 +203,7 @@ main{
 }
 
 #eventosNoticias{
-    min-width: 730px;
+    min-width: 930px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -391,8 +400,23 @@ main{
     transition: all ease .6s;
   }
 
+  .conteinerNoticias a button{
+    font-size: 0.9em;
+    border-radius: 8px;
+    padding: 10px 50px 10px 50px;
+    background-color: rgb(91, 159, 236);
+    color: white;
+    font-weight: bold;
+    transition: .4s;
+  }
+  .conteinerNoticias a button:hover{
+    color: white;
+    background-color: rgb(34, 141, 184);
+    transition: .2s;
+}
+
 #entidades{
-    min-width: 730px;
+    min-width: 930px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -469,54 +493,138 @@ main{
 }
 
 .main_foot{
-    min-width: 740px;
-    background-color: rgba(8, 8, 8, 0.651);
+    min-width: 930px;
+    background: rgb(38,38,38);
+    background: linear-gradient(90deg, rgba(38,38,38,1) 0%, rgba(17,22,23,1) 126%);
     width: 100%;
     display: flex;
     box-sizing: border-box;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.main_foot .logo_foot{
-    width: 33.3%;
+.info{
+    width: 100%;
+    display: flex;
+}
+
+.info .comoLlegar{
+    background-color: #f3f3f3;
+    width: 40%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.comoLlegar *{
+    text-align: center;
     box-sizing: border-box;
 }
-.main_foot .logo_foot img{
-    width: 15em;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    height: 200px;
+
+.comoLlegar h2{
+    font-size: 1.7em;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.comoLlegar h3{
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .direccion{
-    width: 33.3%;
+    width: 60%;
+    height: 100%;
 }
 
 .direccion iframe{
     width: 100%;
-    height: 200px;
-    margin-bottom: -6px;
+    height: 100%;
+}
+
+#autoridades{
+    min-width: 740px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.containerAutoridades{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    box-sizing: border-box;
+}
+.containerAutoridades h2{
+    width: 20%;
+    text-align: center;
+    color: rgb(91, 166, 236);
+    font-weight: bolder;
+}
+
+.nombreCargo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.autoridad{
+    margin: 10px;
+    width: 240px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nombreCargo .autoridad h3{
+    font-weight: lighter;
+    font-size: 1em;
+    text-align: center;
+    color: lightgray;
+}
+
+.nombreCargo .autoridad h4{
+    color: lightgray;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.nombreCargo .autoridad a{
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(70, 70, 136);
+    transition: .4s;
+}
+.nombreCargo .autoridad a:hover{
+    color: rgb(74, 74, 207);
+    transition: .2s;
+}
+
+.infoRedes{
+    width: 100%;
+    display: flex;
 }
 
 .contacto{
-    width: 33.3%;
-    display: grid;
-    justify-items: center;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .redes{
     width: 100%;
-    display: grid;
-    align-items: center;
-    text-align: center;
-    box-sizing: border-box;
-    margin-top: 10px;
 }
 
 .redes h4{
-    color: rgb(45, 124, 155);
+    color: rgb(173, 173, 173);
+    text-align: center;
+    font-weight: bolder;
 }
 
 .iconos{
@@ -568,26 +676,54 @@ main{
 }
 
 .contacto hr{
-    width: 50%;
+    width: 10%;
     color: rgb(97, 192, 255);
+    transition: .4s;
+}
+
+.redes:hover~hr{
+    width: 40%;
+    color: rgb(97, 192, 255);
+    transition: .2s;
 }
 
 .contacto h5{
-    color: lightgray;
+    color: rgb(163, 163, 163);
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .contacto>a{
     text-decoration: none;
     font-size: 1.2em;
-    color: lightgray;
+    color: rgb(70, 70, 136);
     transition: 0.4s;
+    text-align: center;
+    font-weight: bold;
 }
 
 .contacto>a:hover{
     text-decoration: none;
     font-size: 1.2em;
-    color: black;
+    color: rgb(74, 74, 207);
     transition: 0.2s;
+}
+
+.main_foot .infoRedes>a{
+    width: 50%;
+}
+
+.main_foot .infoRedes a .logo_foot{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.main_foot .infoRedes a .logo_foot img{
+    width: 70%;
+    height: 80%;
 }
 
 @media screen and (max-width: 900px) {
