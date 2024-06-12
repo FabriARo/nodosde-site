@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 body{
@@ -34,6 +37,7 @@ body{
 .navbar-nav{
     width: 100%;
     justify-content: space-evenly;
+    align-items: flex-end;
     --bs-nav-link-hover-color: rgb(231, 231, 231);
 }
 
@@ -47,6 +51,7 @@ body{
     color: rgb(167, 167, 167);
     transition: .4s;
     text-shadow: -2px 4px 11px black;
+    margin: 20px;
 }
 
 .nav-link:hover{
@@ -59,6 +64,7 @@ body{
     min-width: 930px;
     display: grid;
     align-items: center;
+    background-color: black;
 }
 
 .carousel-inner{
@@ -69,7 +75,10 @@ body{
 .carousel-item{
     width: 100%;
     height: 500px;
-    transition: transform 2s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.carousel-item.active{
+    transition: all 1s ease-in-out;
 }
 
 .carousel-item img{
@@ -119,7 +128,7 @@ body{
     to{
         color: rgb(247, 184, 67);
         text-shadow: -2px 4px 7px black;
-        font-weight: 900;
+        font-weight: 600;
     }
 }
 @keyframes c_cyan{
@@ -141,7 +150,7 @@ body{
     to{
         color: rgb(45, 124, 155);
         text-shadow: -2px 4px 7px black;
-        font-weight: 900;
+        font-weight: 600;
     }
 }
 
@@ -190,11 +199,49 @@ body{
 
 .carousel .iconos-carousel{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex;
     position: absolute;
-    bottom: 0;
+    top: 12%;
+    left: 4.3%;
     z-index: 3;
     width: 100%;
+}
+
+.iconos-carousel .ico{
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    margin: 10px;
+}
+
+.iconos-carousel .yt{
+    background-image: url(../icon/yt-carousel.png);
+    transition: 0.4s;
+}
+
+.iconos-carousel .x{
+    background-image: url(../icon/x-carousel.png);
+    transition: 0.4s;
+}
+
+.iconos-carousel .fb{
+    background-image: url(../icon/fb-carousel.png);
+    transition: 0.4s;
+}
+
+.iconos-carousel .yt:hover{
+    background-image: url(../icon/yt-carousel_hover.png);
+    transition: 0.2s;
+}
+
+.iconos-carousel .x:hover{
+    background-image: url(../icon/x-carousel_hover.png);
+    transition: 0.2s;
+}
+
+.iconos-carousel .fb:hover{
+    background-image: url(../icon/fb-carousel_hover.png);
+    transition: 0.2s;
 }
 
 main{
@@ -228,7 +275,7 @@ main{
     font-size: 3em;
     width: 100%;
     text-align: center;
-    color: rgb(45, 124, 155);
+    color: rgb(206, 205, 205);
     margin: 0;
 }
 
@@ -240,8 +287,14 @@ main{
 }
 
 .conteinerNoticias hr{
+    width: 5%;
+    color: rgb(91, 159, 236);
+    transition: .2s ease;
+}
+.conteinerNoticias:hover hr{
     width: 30%;
-    color: rgb(91, 159, 236);}
+    transition: .2s ease;
+}
 
 .cajasEventos {
     display: flex;
@@ -434,8 +487,21 @@ main{
 }
 
 .conteinerEntidades h2{
+    color: rgb(206, 205, 205);
     font-size: 3em;
-    margin-bottom: 20px;
+    margin: 0;
+}
+
+.conteinerEntidades hr{
+    margin-top: 5px;
+    width: 2%;
+    color: rgb(91, 159, 236);
+    transition: .4s ease;
+}
+
+.conteinerEntidades:hover hr{
+    width: 15%;
+    transition: .2s ease;
 }
 
 .cajasEntidades{
@@ -502,6 +568,16 @@ main{
     flex-wrap: wrap;
 }
 
+.bg{
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    background-image: url(../img/fondo_foot.png);
+    background-size: cover;
+    background-position: center;
+}
+
 .info{
     width: 100%;
     display: flex;
@@ -555,6 +631,7 @@ main{
     align-items: center;
     margin: 20px;
     box-sizing: border-box;
+    
 }
 .containerAutoridades h2{
     width: 20%;
@@ -596,7 +673,7 @@ main{
 .nombreCargo .autoridad a{
     text-decoration: none;
     font-weight: 600;
-    color: rgb(70, 70, 136);
+    color: rgb(142, 142, 160);
     transition: .4s;
 }
 .nombreCargo .autoridad a:hover{
@@ -633,43 +710,43 @@ main{
     justify-content: space-evenly;
 }
 
-.ico{
+.iconos .ico{
     width: 40px;
     height: 40px;
     background-size: cover;
     margin: 10px;
 }
 
-.yt{
+.iconos .yt{
     background-image: url(../icon/yt.png);
     transition: 0.4s;
     scale: 1.2;
 }
 
-.x{
+.iconos .x{
     background-image: url(../icon/x.png);
     transition: 0.4s;
     scale: 1.1;
 }
 
-.fb{
+.iconos .fb{
     background-image: url(../icon/fb.png);
     transition: 0.4s;
 }
 
-.yt:hover{
+.iconos .yt:hover{
     background-image: url(../icon/yt_hover.png);
     transition: 0.2s;
     scale: 1.3;
 }
 
-.x:hover{
+.iconos .x:hover{
     background-image: url(../icon/x_hover.png);
     transition: 0.2s;
     scale: 1.3;
 }
 
-.fb:hover{
+.iconos .fb:hover{
     background-image: url(../icon/fb_hover.png);
     transition: 0.2s;
     scale: 1.2;
@@ -697,7 +774,7 @@ main{
 .contacto>a{
     text-decoration: none;
     font-size: 1.2em;
-    color: rgb(70, 70, 136);
+    color: rgb(142, 142, 160);
     transition: 0.4s;
     text-align: center;
     font-weight: bold;
@@ -710,20 +787,81 @@ main{
     transition: 0.2s;
 }
 
-.main_foot .infoRedes>a{
+.main_foot .bg .infoRedes>a{
     width: 50%;
 }
 
-.main_foot .infoRedes a .logo_foot{
+.main_foot .bg .infoRedes a .logo_foot{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
 }
-.main_foot .infoRedes a .logo_foot img{
+.main_foot .bg .infoRedes a .logo_foot img{
     width: 70%;
     height: 80%;
+}
+
+.go-top-container{
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    width: 3em;
+    height: 3em;
+    z-index: -1;
+}
+
+.go-top-button{
+    width: 0rem;
+    width: 0rem;
+    background-color: #2071b2;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.go-top-button i{
+    position: absolute;
+    font-size: 1em;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: .2s;
+}
+
+.show{
+    z-index: 10;
+}
+
+.show .go-top-button{
+    animation: popup .3s ease-in-out;
+    width: 3em;
+    height: 3em;
+    z-index: 11;
+}
+
+.show i{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 4em;
+        height: 4em;
+    }
+    100%{
+        width: 3em;
+        height: 3em;
+    }
 }
 
 @media screen and (max-width: 900px) {
