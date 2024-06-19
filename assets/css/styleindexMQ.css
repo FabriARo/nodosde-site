@@ -1,4 +1,4 @@
-@media only screen, (max-width: 930px), (min-width: 460px) and (orientation: portrait){
+@media screen and (max-width: 930px) and (min-width: 460px) and (orientation: portrait){
     .navbar{
         min-width: 460px;
     }
@@ -19,23 +19,174 @@
     }
 }
 
-@media only screen, (max-width: 460px) and (orientation: portrait){
+@media screen and (max-device-width: 460px) and (min-device-width: 100px) and (orientation: portrait){
+    .logonodo{
+        width: 70%;
+    }
+
     .navbar{
         min-width: 100px;
     }
+
     .carousel{
         min-width: 100px;
+        height: 350px;
     }
+    
+    .carousel-inner{
+        height: 350px;
+    }
+
+    .carousel-item{
+        height: 350px;
+    }
+
+    .carousel-item img{
+        height: 100%;
+    }
+
+    .textConteiner{
+        margin: 0;
+        top: 8rem;
+    }
+
+    .primerTitulo, .segundoTitulo{
+        margin: 0;
+    }
+    .primerTitulo{
+        margin-bottom: 20px;
+    }
+
+    .primerPalabra{
+        font-size: 1.5rem;
+    }
+
+    .segundaPalabra{
+        font-size: 1.5rem;
+    }
+
+    @keyframes c_red{
+        from{
+            font-size: 1.5rem;
+            color: black;
+        }
+        to{
+            font-size: 2rem;
+            color: rgb(250, 61, 61);
+            font-weight: 900;
+            text-shadow: -2px 5px 7px black;
+        }
+    }
+    @keyframes c_orange{
+        from{
+            color: black;
+        }
+        to{
+            color: rgb(247, 184, 67);
+            text-shadow: -2px 4px 7px black;
+            font-weight: 600;
+        }
+    }
+    @keyframes c_cyan{
+        from{
+            font-size: 1.5rem;
+            color: black;
+        }
+        to{
+            font-size: 2rem;
+            color: rgb(91, 159, 236);
+            font-weight: 900;
+            text-shadow: -2px 5px 7px black;
+        }
+    }
+    @keyframes c_blue{
+        from{
+            color: black;
+        }
+        to{
+            color: rgb(45, 124, 155);
+            text-shadow: -2px 4px 7px black;
+            font-weight: 600;
+        }
+    }
+
+    .btn-outline-light{
+        display: none;
+    }
+
+    .botonesInicio{
+        display: none;
+    }
+    
+    .botonesInicio a button{
+        display: none;
+    }
+
     #eventosNoticias{
         min-width: 100px;
     }
+
+    .wrapper i{
+        display: none;
+    }
+
     #entidades{
         min-width: 100px;
     }
+
+    .conteinerEntidades{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .entidadesItem{
+        width: 200px;
+        height: 200px;
+        margin: 30px;
+    }
+
     .main_foot{
         min-width: 100px;
     }
+
+    .info{
+        flex-wrap: wrap;
+    }
+
+    .info .comoLlegar{
+        width: 100%;
+    }
+
+    .direccion{
+        width: 100%;
+        height: 20rem;
+    }
+
     #autoridades{
         min-width: 100px;
+    }
+    .containerAutoridades{
+        flex-direction: column;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0px 20px 0px;
+    }
+
+    .iconos .ico{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .contacto h5{
+        font-size: 1rem;
+        margin-top: 0px;
+    }
+
+    .contacto>a{
+        font-size: 0.9rem;
+        margin-bottom: 20px;
     }
 }
