@@ -1,3 +1,41 @@
 @media only screen, (max-width: 930px), (min-width: 460px) and (orientation: portrait){
-    
+    .navbar{
+        min-width: 460px;
+    }
+    .carousel{
+        min-width: 460px;
+    }
+    #eventosNoticias{
+        min-width: 460px;
+    }
+    #entidades{
+        min-width: 460px;
+    }
+    .main_foot{
+        min-width: 460px;
+    }
+    #autoridades{
+        min-width: 460px;
+    }
+}
+
+@media only screen, (max-width: 460px) and (orientation: portrait){
+    .navbar{
+        min-width: 100px;
+    }
+    .carousel{
+        min-width: 100px;
+    }
+    #eventosNoticias{
+        min-width: 100px;
+    }
+    #entidades{
+        min-width: 100px;
+    }
+    .main_foot{
+        min-width: 100px;
+    }
+    #autoridades{
+        min-width: 100px;
+    }
 }
