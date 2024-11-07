@@ -1,0 +1,280 @@
+.logonodo{
+    width: 35%;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    min-width: 930px;
+    width: 100%;
+    position: relative;
+    background: rgb(29,29,29);
+    background: linear-gradient(90deg, rgba(29,29,29,1) 0%, rgba(45,45,45,1) 29%, rgba(37,37,37,1) 70%, rgba(20,20,20,1) 100%);
+    z-index: 2;
+}
+
+.container-fluid .navbar-brand{
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar-brand{
+    padding-left: 5%;
+}
+
+.navbar-nav{
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    --bs-nav-link-hover-color: rgb(231, 231, 231);
+}
+
+.navbar-nav .nav-link.active{
+    color: rgb(255, 255, 255);
+    text-shadow: none;
+    font-weight: bolder;
+    text-shadow: -2px 4px 11px black;
+}
+
+.nav-link{
+    font-weight: bolder;
+    color: rgb(199, 199, 199);
+    transition: .4s;
+    text-shadow: -2px 4px 11px black;
+    margin: 20px;
+}
+
+.nav-link:hover{
+    color: rgb(231, 231, 231);
+    transition: .2s;
+    text-shadow: none;
+}
+
+.listaNoticias{
+    min-width: 930px;
+    width: 100%;
+    background-image: url(../img/fondoNodo.png);
+    padding: 1rem 4rem 2rem 4rem;
+}
+
+.listaNoticias hr{
+    height: 2rem;
+    width: 105%;
+    border-top: 1rem solid rgb(0, 26, 56);
+    opacity: 80%;
+    position: relative;
+    right: 2rem;
+}
+
+.col .card{
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.col .card .card-img-top{
+    transition: .4s;
+}
+
+.col .card .img{
+    transition: .4s;
+}
+
+.col .card:hover img{
+    scale: 1.1;
+    transition: .2s;
+}
+
+.col .card .card-body .card-title{
+    transition: .4s;
+}
+
+.col .card:hover .card-body .card-title{
+    color: rgb(250, 61, 61);
+    transition: .2s;
+}
+
+.col .card .card-body .card-text{
+    transition: .4s;
+}
+
+.col .card:hover .card-body .card-text{
+    color: rgb(250, 61, 61);
+    transition: .2s;
+}
+
+.main_foot{
+    min-width: 930px;
+    background: rgb(29,29,29);
+    background: linear-gradient(90deg, rgba(29,29,29,1) 0%, rgba(45,45,45,1) 29%, rgba(37,37,37,1) 70%, rgba(20,20,20,1) 100%);
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    height: 13rem;
+    overflow: hidden;
+    position: relative;
+    bottom: 0;
+}
+
+.infoRedes{
+    width: 100%;
+    display: flex;
+    position: relative;
+    bottom: -0.5rem;
+}
+
+.contacto{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.redes{
+    width: 100%;
+    position: relative;
+    bottom: 1rem;
+}
+
+.redes h4{
+    color: rgb(173, 173, 173);
+    text-align: center;
+    font-weight: bolder;
+    position: relative;
+    top: 2.3rem;
+    right: 8rem;
+}
+
+.iconos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    left: 22rem;
+    bottom: .7rem;
+    z-index: 3;
+}
+
+.iconos .ico{
+    width: 3rem;
+    height: 3rem;
+    background-size: cover;
+}
+
+.iconos .yt{
+    background-image: url(../icon/yt.png);
+    transition: 0.4s;
+    scale: 1.2;
+}
+
+.iconos .x{
+    background-image: url(../icon/x.png);
+    transition: 0.4s;
+    scale: 1.1;
+}
+
+.iconos .fb{
+    background-image: url(../icon/fb.png);
+    transition: 0.4s;
+}
+
+.iconos .yt:hover{
+    background-image: url(../icon/yt_hover.png);
+    transition: 0.2s;
+    scale: 1.3;
+}
+
+.iconos .x:hover{
+    background-image: url(../icon/x_hover.png);
+    transition: 0.2s;
+    scale: 1.3;
+}
+
+.iconos .fb:hover{
+    background-image: url(../icon/fb_hover.png);
+    transition: 0.2s;
+    scale: 1.2;
+}
+
+.main_foot .infoRedes .logo_foot{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.main_foot .infoRedes .logo_foot a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    bottom: .5rem;
+    left: 5rem;
+}
+
+.main_foot .infoRedes .logo_foot a img{
+    width: 20rem;
+}
+
+.go-top-container{
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    width: 3em;
+    height: 3em;
+    z-index: -1;
+}
+
+.go-top-button{
+    width: 0rem;
+    width: 0rem;
+    background-color: #2071b2;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.go-top-button i{
+    position: absolute;
+    font-size: 1em;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: .2s;
+}
+
+.show{
+    z-index: 10;
+}
+
+.show .go-top-button{
+    animation: popup .3s ease-in-out;
+    width: 3em;
+    height: 3em;
+    z-index: 11;
+}
+
+.show i{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 4em;
+        height: 4em;
+    }
+    100%{
+        width: 3em;
+        height: 3em;
+    }
+}

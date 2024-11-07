@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nodo Tecnológico - SDE</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-5.3.3/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/styleindex.css">
     <link rel="stylesheet" href="./assets/css/styleindexMQ.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-              <a class="navbar-brand" href="./index.html">
+              <a class="navbar-brand" href="./index.php">
                 <img class="logonodo" src="./assets/img/logoNodofoot.png" alt="Nodo tecnológico SDE">
               </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <button onclick="ocultarTexto()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./index.html">HOME</a>
+                    <a class="nav-link active" aria-current="page" href="./index.php">HOME</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">NOTICIAS</a>
+                    <a class="nav-link" href="./assets/pages/news.php">NOTICIAS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">DIRECTIVOS</a>
+                    <a class="nav-link" href="./assets/pages/autoridades.php">DIRECTIVOS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">CONTACTO</a>
+                    <a class="nav-link" href="./assets/pages/contacto.php">CONTACTO</a>
                   </li>
                 </ul>
               </div>
@@ -68,7 +68,7 @@
                     <div class="segundaPalabra fut">FUTURO</div>
                 </div>
                 <div class="botonesInicio">
-                    <a href="#eventosNoticias"><button type="button" class="btn btn-light">Eventos</button></a>
+                    <a href="#con"><button type="button" class="btn btn-outline-light">Eventos</button></a>
                     <a href="#entidades"><button type="button" class="btn btn-outline-light">Entidades</button></a>
                 </div>
             </div>
@@ -76,7 +76,7 @@
     </header>
     <main>
         <section id="eventosNoticias">
-            <div class="conteinerNoticias">
+            <div class="conteinerNoticias" id="con">
                 <h2>EVENTOS</h2>
                 <hr>
                 <p>Conozca todos los eventos que se llevan a cabo en el nodo tecnológico.</p>
@@ -130,7 +130,7 @@
                       <i id="right" class="fa-solid fa-angle-right"></i>
                     </div>
                   </div>
-                <a href="#">
+                <a href="./assets/pages/news.php">
                   <button type="button" class="btn btn-light">VER MÁS</button>
                 </a>
             </div>
@@ -140,7 +140,7 @@
             <h2>ENTIDADES</h2>
             <hr>
             <div class="cajasEntidades">
-                <a href="#" target="_blank">
+                <a href="https://www.afip.gob.ar/moa/" target="_blank">
                     <div class="entidadesItem adu">
                         <div class="img_foot">
                             <img src="./assets/img/afip_logo.png" alt="AFIP Aduana">
@@ -161,7 +161,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="#" target="_blank">
+                <a href="http://turnos.sde.gob.ar/secitec/" target="_blank">
                     <div class="entidadesItem secre">
                         <div class="img_foot">
                             <img src="./assets/img/logo_secretaria.png" alt="Secretaría de desarrollo">
@@ -194,32 +194,32 @@
       <div class="containerAutoridades">
         <h2>AUTORIDADES</h2>
         <div class="nombreCargo">
-          <div class="autoridad">
-            <h3>Director de Ciencia y Tecnología</h3>
-            <h4>Ing. Edmundo Vizgarra Gómez</h4>
-            <a href="#">
-              example@gmail.com
+        <div class="autoridad">
+            <h3>Secretario de Ciencia y Tecnología</h3>
+            <h4>Ing. Adrián Omar Suárez</h4>
+            <a href="mailto:adriansuarez@sde.gob.ar?Subject=Consulta%20desde%20la%20página%20NODOSDE">
+              adriansuarez@sde.gob.ar
             </a>
           </div>
           <div class="autoridad">
-            <h3>Directora de Administración</h3>
-            <h4>CPN María Dell Aringa</h4>
-            <a href="#">
-              example@gmail.com
+            <h3>Director de Ciencia y Tecnología</h3>
+            <h4>Ing. Edmundo Vizgarra Gómez</h4>
+            <a href="mailto:edmundovizgarra@sde.gob.ar?Subject=Consulta%20desde%20la%20página%20NODOSDE">
+              edmundovizgarra@sde.gob.ar
             </a>
           </div>
           <div class="autoridad">
             <h3>Director de Gestión Pública</h3>
             <h4>Sr. Ricardo Montenegro</h4>
-            <a href="#">
-              example@gmail.com
+            <a href="mailto:ricardomontenegro@sde.gob.ar?Subject=Consulta%20desde%20la%20página%20NODOSDE">
+              ricardomontenegro@sde.gob.ar
             </a>
           </div>
           <div class="autoridad">
-            <h3>Secretario de Ciencia y Tecnología</h3>
-            <h4>Ing. Adrián Omar Suárez</h4>
-            <a href="adriansuarez@sde.gob.ar">
-              adriansuarez@sde.gob.ar
+            <h3>Directora de Administración</h3>
+            <h4>CPN María Dell Aringa</h4>
+            <a href="mailto:mdellaringa@sde.gob.ar?Subject=Consulta%20desde%20la%20página%20NODOSDE">
+              mdellaringa@sde.gob.ar
             </a>
           </div>
         </div>
@@ -239,18 +239,15 @@
                 <a href="https://www.facebook.com/Nodotecnologicosde/?fref=ts" target="_blank">
                 <div class="ico fb"></div>
                 </a>
+                <a href="mailto:informes@nodosde.com"></a>
             </div>
         </div>
-        <hr>
-        <h5>Envianos un email</h5>
-        <a href="informes@nodosde.gob.ar" target="_blank">informes@nodosde.gob.ar</a>
-    </div>
-      <a href="./index.html">
-        <div class="logo_foot">
-        <img src="./assets/img/logoNodofoot.png" alt="Nodo Tecnológico">
         </div>
-      </a>
-    </div>
+        <div class="logo_foot">
+          <a href="./index.php">
+            <img src="./assets/img/logoNodofoot.png" alt="Nodo Tecnológico">
+          </a>
+        </div>
     </div>
     </footer>
     <div class="go-top-container">
@@ -258,8 +255,9 @@
         <i class="fas fa-chevron-up"></i>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./assets/js/bootstrap-5.3.3/bootstrap.bundle.js"></script>
     <script src="./assets/js/script-carouselEvent.js" defer></script>
     <script src="./assets/js/script-goToTop.js"></script>
+    <script src="./assets/js/script-hideText.js"></script>
 </body>
 </html>
